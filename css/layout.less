@@ -482,7 +482,7 @@ input:disabled {
 .container {
     height: 100vh;
     overflow: hidden;
-    background: #3DABDB;
+    background: #3eaddc;
     .logo-box {
         padding: 2rem;
     }
@@ -490,11 +490,10 @@ input:disabled {
         height: 2rem;
     }
     .banner {
-        height: 24rem;
         height: 21rem;
         overflow: hidden;
         background: url(../images/3.gif) center center/cover no-repeat;
-        background-position: 0rem 0rem;
+        background-position: 0rem -2rem;
         position: relative;
         z-index: 1;
         margin-bottom: 2vh;
@@ -513,11 +512,10 @@ input:disabled {
         position: absolute;
         font-size: 1.5rem;
         font-weight: 400;
-        color: rgba(255, 255, 255, 0.6);
+        color: rgba(255, 255, 255, 0.7);
         z-index: 3;
         opacity: 0;
         transform: translate(-50%, 100%);
-        transition: all 1.5s;
         &.active {
             opacity: 1;
             transform: translate(-50%, 0%);
@@ -525,20 +523,24 @@ input:disabled {
     }
 
     .banner-icon-txt01 {
-        top: 54%;
-        left: 14%;
+        top: 43%;
+        left: 14.5%;
+        transition: all 1s linear 0s;
     }
     .banner-icon-txt02 {
-        top: 68%;
+        top: 58%;
         left: 45%;
+        transition: all 1s linear 1s;
     }
     .banner-icon-txt03 {
-        top: 38%;
+        top: 26%;
         left: 60%;
+        transition: all 1s linear 2s;
     }
     .banner-icon-txt04 {
-        top: 72%;
+        top: 61%;
         right: 4.5%;
+        transition: all 1s linear 3s;
     }
 
     .banner-bg {
@@ -547,7 +549,7 @@ input:disabled {
     .slideup-box {
         opacity: 0;
         transform: translate(0%, 100%);
-        transition: all 1s;
+        transition: all 1s linear 2.5s; 
         &.active {
             opacity: 1;
             transform: translate(0%, 0%);
@@ -640,6 +642,23 @@ input:disabled {
                 height: 1.56rem;
                 // opacity:0.2;
             }
+            .qrcode {
+                padding: 0.2rem;
+                background-color: #ffffff;
+                overflow: hidden;
+            }
+            .qrcode-inner {
+                width: 100%;
+                height: 100%;
+                border-radius: 0.2rem;
+                overflow: hidden;
+            }
+            .qrcode-img {
+                width: 100%;
+                height: 100%;
+                vertical-align: middle;
+                // border-radius: 0.4rem;
+            }
         }
         .sel-item-small {
             transform: scale(1);
@@ -648,7 +667,11 @@ input:disabled {
             .qrcode {
                 width: 2.8rem;
                 height: 2.9rem;
+                border: 0.2rem solid rgba(62, 173, 220, 1);
+                box-sizing: border-box;
+                border-radius: 0.4rem;
             }
+
             .sel-logo {
                 width: 3rem;
                 height: 1rem;
@@ -666,6 +689,9 @@ input:disabled {
             .qrcode {
                 width: 5rem;
                 height: 5rem;
+                border: 0.3rem solid rgba(62, 173, 220, 1);
+                box-sizing: border-box;
+                border-radius: 0.5rem;
                 // transform: scale(1);
             }
             .sel-logo {
@@ -683,7 +709,7 @@ input:disabled {
         .tip-icon {
             width: 4.6rem;
             height: 2.2rem;
-            &:last-of-type{
+            &:last-of-type {
                 width: 5.7rem;
             }
         }
@@ -759,5 +785,37 @@ input:disabled {
     }
     100% {
         transform: scale(1.8);
+    }
+}
+// 敬请期待
+.waiting_box {
+    font-size: 0;
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .video {
+        background-color: rgb(34, 24, 21);
+        height: 20.5rem;
+        position: relative;
+        .bg {
+            .translate(-50%, -50%);
+            background: url('../images/video.png?v=1.0.1') no-repeat center;
+            background-size: 100% 100%;
+            height: 4rem;
+            opacity: 0.8;
+            position: absolute;
+            z-index: 1000;
+            left: 50%;
+            top: 50%;
+            width: 3.6rem;
+        }
+    }
+    video {
+        background-color: #d9ccbc;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
     }
 }

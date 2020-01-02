@@ -2,17 +2,15 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>
-            名锐讯动
-        </title>
+        <title>mrt名锐讯动</title>
         <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="format-detection" content="telephone=no" />
         <link rel="stylesheet" type="text/css" href="css/layout.css?v=1.1.1">
         <link rel="stylesheet" type="text/css" href="css/common.css">
-        <link rel="stylesheet" type="text/css" href="swiper-4.5.0/dist/css/swiper.min.css">
+        <!-- <link rel="stylesheet" type="text/css" href="swiper-4.5.0/dist/css/swiper.min.css"> -->
         <script type="text/javascript" src="js/jquery1.9.1.min.js"></script>
-        <script type="text/javascript" src="swiper-4.5.0/dist/js/swiper.min.js"></script>
+        <!-- <script type="text/javascript" src="swiper-4.5.0/dist/js/swiper.min.js"></script> -->
         <style type="text/css">
         </style>
     </head>
@@ -26,7 +24,7 @@
             </div>
             <!--  -->
             <div class="banner">
-                <div class="banner-bg2"></div>
+                <!-- <div class="banner-bg2"></div> -->
                 <p class="banner-icon-txt banner-icon-txt01">微信开发</p>
                 <p class="banner-icon-txt banner-icon-txt02">互联网+服务</p>
                 <p class="banner-icon-txt banner-icon-txt03">行业解决方案</p>
@@ -42,7 +40,11 @@
                     <ul class="sel-menu flex flex-jcsb flex-ver">
                         <li class="sel-li">
                             <div data-index="0" class="sel-item sel-item-small flex flex-center">
-                                <img class="qrcode" src="images/qrcode-small.png">
+                                <div class="qrcode">
+                                    <div class="qrcode-inner">
+                                        <img class="qrcode-img" src="images/contact.jpg" alt="">
+                                    </div>
+                                </div>
                                 <img class="mul-icon mul-icon01" src="images/l01.png" alt="">
                                 <img class="mul-icon mul-icon02" src="images/l02.png" alt="">
                                 <img class="mul-icon mul-icon03" src="images/l03.png" alt="">
@@ -64,7 +66,11 @@
                         </li>
                         <li class="sel-li">
                             <div data-index="2" class="sel-item sel-item-small flex flex-center">
-                                <img class="qrcode" src="images/qrcode-small.png">
+                                <div class="qrcode">
+                                    <div class="qrcode-inner">
+                                        <img class="qrcode-img" src="images/group.jpg" alt="">
+                                    </div>
+                                </div>
                                 <img class="mul-icon mul-icon01" src="images/l01.png" alt="">
                                 <img class="mul-icon mul-icon02" src="images/l02.png" alt="">
                                 <img class="mul-icon mul-icon03" src="images/l03.png" alt="">
@@ -77,27 +83,27 @@
                 </div>
                 <div class="tip-box flex flex-align-center">
                     <img class="tip-icon" src="images/left.png">
-                    <p class="tip">今天你点官网了吗</p>
+                    <p class="tip">官网</p>
                     <img class="tip-icon" src="images/right.png">
                 </div>
             </div>
             <div class="mask">
                 <div class="content">
                     <h2 class="mask-title">
-                        想和我聊天嘛，先关注我哟
+                        客服
                     </h2>
-                    <img src="images/qrcode-big.png" class="mask-qrcode">
-                    <img src="images/qrcode-big.png" class="mask-qrcode">
+                    <img src="images/contact.jpg" class="mask-qrcode" alt="">
+                    <img src="images/group.jpg" class="mask-qrcode" alt="">
                     <img id="closeBtn" src="images/close_btn.png" class="close-icon">
                 </div>
             </div>
         </div>
         <script type="text/javascript">
             $(function() {
-                setTimeout(()=>{
+                setTimeout(() => {
                     $('.banner-icon-txt').addClass('active')
                     $('.slideup-box').addClass('active')
-                },1000)
+                }, 1000)
                 // 底部二维码 官网入口大小变化切换
                 let mulIndex = 1
                 var timer = setInterval(function() {
@@ -105,20 +111,20 @@
                     mulIndex = mulIndex > 2 ? 0 : mulIndex
                     switch (mulIndex) {
                         case 0:
-                            $('.tip').html('想和我聊天嘛，先关注我哟')
+                            $('.tip').html('客服')
                             break
                         case 1:
-                            $('.tip').html('今天你点官网了吗')
+                            $('.tip').html('官网')
                             break
                         case 2:
-                            $('.tip').html('做一个有脾气的公众号')
+                            $('.tip').html('公众号')
                             break
                     }
                     $('.sel-li').find('.sel-item').removeClass(
                         'sel-item-big').addClass('sel-item-small')
                     $('.sel-li').eq(mulIndex).find('.sel-item').removeClass('sel-item-small')
                         .addClass('sel-item-big')
-                }, 6000)
+                }, 3000)
                 // 底部点击
                 $('.sel-item').on('click', function() {
                     let index = $(this).data('index')
@@ -126,7 +132,7 @@
                         case 0:
                             $('.mask').fadeIn()
                             $('.mask-qrcode').eq(0).fadeIn()
-                            $('.mask-title').html('想和我聊天嘛，先关注我哟')
+                            $('.mask-title').html('客服')
                             break
                         case 1:
                             window.location.href = ('http://mrxdtech.com')
@@ -134,7 +140,7 @@
                         case 2:
                             $('.mask').fadeIn()
                             $('.mask-qrcode').eq(1).fadeIn()
-                            $('.mask-title').html('做一个有脾气的公众号')
+                            $('.mask-title').html('公众号')
                             break
                     }
                 })
