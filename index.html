@@ -23,7 +23,7 @@
                 </a>
             </div>
             <!--  -->
-            <div class="banner">
+            <div id="banner" class="banner">
                 <!-- <div class="banner-bg2"></div> -->
                 <p class="banner-icon-txt banner-icon-txt01">微信开发</p>
                 <p class="banner-icon-txt banner-icon-txt02">互联网+服务</p>
@@ -101,9 +101,12 @@
         <script type="text/javascript">
             $(function() {
                 setTimeout(() => {
+                    $('#banner').removeClass('banner-bg').addClass('banner-bg')
+                }, 0)
+                setTimeout(() => {
                     $('.banner-icon-txt').addClass('active')
                     $('.slideup-box').addClass('active')
-                }, 1000)
+                }, 500)
                 // 底部二维码 官网入口大小变化切换
                 let mulIndex = 1
                 var timer = setInterval(function() {
